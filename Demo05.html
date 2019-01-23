@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Cong(x, y)
+        {
+            return x + y;
+        }
+
+        function Tru(x, y)
+        {
+            return x - y;
+        }
+
+        function Nhan(x, y)
+        {
+            return x * y;
+        }
+
+        function Chia(x, y)
+        {
+            if(y === 0)
+                return "Loi chi 0";
+            else
+                return x / y;
+        }
+
+        function sayHello()
+        {
+            console.log("Hello world!!!");
+        }
+        
+        
+        sayHello();
+        console.log(Cong(8, 2));
+        console.log(Tru(9, 5));
+        console.log(Nhan(3, 2));
+        console.log(Chia(5, 2));
+        console.log(Chia(5, 0));
+
+    </script>
+</body>
+</html>
