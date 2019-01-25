@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo 02</title>
+    <script type="text/javascript">
+        function Cong()
+        {
+            var nodeSoA = document.getElementById('SoA');
+            var a = parseInt(nodeSoA.value);
+
+            var nodeSoB = document.getElementById('SoB');
+            var b = parseInt(nodeSoB.value);
+
+            var ketQua = a + b;
+            
+            var nodeKetQua = document.getElementById('KetQua');
+            nodeKetQua.innerHTML = "Ket qua = " + ketQua;
+        }
+
+        function Tru()
+        {
+            var nodeSoA = document.getElementById('SoA');
+            var a = parseInt(nodeSoA.value);
+
+            var nodeSoB = document.getElementById('SoB');
+            var b = parseInt(nodeSoB.value);
+
+            var ketQua = a - b;
+            
+            var nodeKetQua = document.getElementById('KetQua');
+            nodeKetQua.innerHTML = "Ket qua = " + ketQua;
+        }
+
+        function Nhan()
+        {
+            var nodeSoA = document.getElementById('SoA');
+            var a = parseInt(nodeSoA.value);
+
+            var nodeSoB = document.getElementById('SoB');
+            var b = parseInt(nodeSoB.value);
+
+            var ketQua = a * b;
+            
+            var nodeKetQua = document.getElementById('KetQua');
+            nodeKetQua.innerHTML = "Ket qua = " + ketQua;
+        }
+
+        function Chia()
+        {
+            var nodeSoA = document.getElementById('SoA');
+            var a = parseInt(nodeSoA.value);
+
+            var nodeSoB = document.getElementById('SoB');
+            var b = parseInt(nodeSoB.value);
+
+            var ketQua = (b != 0) ? a / b : "Loi chia 0";
+            
+            var nodeKetQua = document.getElementById('KetQua');
+            nodeKetQua.innerHTML = "Ket qua = " + ketQua;
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    So a = <input type='number' id='SoA' /><br />
+    So b = <input type='number' id='SoB' /><br />
+    
+    <button onclick="Cong()">Cong</button>
+    <button onclick="Tru()">Tru</button>
+    <button onclick="Nhan()">Nhan</button>
+    <button onclick="Chia()">Chia</button>
+    
+    <div id="KetQua"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function ToMauNen(maMau)
+        {
+            document.bgColor = maMau;
+        }
+    </script>
+</head>
+<body>
+    <h1>Demo 03 - event</h1>
+    <button onclick="console.log('Click me 01');">Click me 01</button>
+    <button onclick="console.log('Click me 02');">Click me 02</button>
+    <button onclick="console.log('Click me 03');">Click me 03</button>
+    
+    <img src="img/hinh.jpg" width="300"
+        onmouseover="ToMauNen('#3c6')"
+        onmouseout="ToMauNen('#6633CC')"
+        />
+
+    <input type="text" 
+        onfocus="ToMauNen('#cc3366')"
+        onblur="ToMauNen('#3366cc')"   
+    />
+
+    
+</body>
+</html>

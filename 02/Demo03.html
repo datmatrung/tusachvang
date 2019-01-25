@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo 03</title>
+</head>
+<body>
+    <h3>Dynamic Table</h3>
+    <div>
+        So dong: <input type="number" id="soDong" />
+    </div>
+    <div>
+        So cot: <input type="number" id="soCot" />
+    </div>
+    <button onclick="TaoBang()">Tao bang</button>
+    <div id="ViTri"></div>
+    
+    <script type="text/javascript">
+        function TaoBang()
+        {
+            var nodeSoDong = document.getElementById('soDong');
+            var nodeSoCot = document.getElementById('soCot');
+
+            var dong = parseInt(nodeSoDong.value);
+            var cot = parseInt(nodeSoCot.value);
+
+            var nodeViTri = document.getElementById("ViTri");
+            
+            var nodeTable = document.createElement('table');
+            nodeTable.border = 1;
+
+            nodeViTri.appendChild(nodeTable);
+
+            var nodeTbody = document.createElement('tbody');
+            nodeTable.appendChild(nodeTbody);
+
+            for(var i = 0; i < dong; i++)
+            {
+                var nodeTR = document.createElement('tr');
+                nodeTbody.appendChild(nodeTR);
+
+                for(var j = 0; j < cot; j++)
+                {
+                    var nodeTD = document.createElement('td');
+                    nodeTR.appendChild(nodeTD);
+                    
+                    var nodeText = document.createTextNode(i+""+j);
+                    nodeTD.appendChild(nodeText);
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

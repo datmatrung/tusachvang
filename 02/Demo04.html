@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo 04</title>
+</head>
+<body>
+    <h1>Danh sach sinh vien</h1>
+    <fieldset>
+        <legend>Thong tin sinh vien</legend>
+        <div>
+            Ho ten: <input type="text" id="hoTen" />
+        </div>
+        <div>
+            <button onclick="Them()">Them</button>
+            <button onclick="Xoa()">Xoa</button>
+            <button onclick="XoaDanhSach()">Xoa danh sach</button>
+        </div>
+    </fieldset>
+    <div id="danhSach"></div>
+    
+    <script type='text/javascript'>
+        var danhSach = document.getElementById('danhSach');
+        var hoTen = document.getElementById('hoTen');
+        var i = 1;
+
+        function Them()
+        {
+            var data = (hoTen.value === "") ? "Noname" : hoTen.value;
+            
+            var pNode = document.createElement('p');
+            var textNode = document.createTextNode(i + ". " + data);
+
+            pNode.appendChild(textNode);
+
+            danhSach.appendChild(pNode);
+            i++;
+
+            hoTen.focus();            
+        }
+
+        function Xoa()
+        {
+            if(danhSach.childNodes.length > 0)
+            {
+                danhSach.removeChild(danhSach.lastChild);
+                i--;
+            }
+
+            hoTen.focus();
+        }
+
+        function XoaDanhSach()
+        {
+            // Cach 01:
+            // while(danhSach.childNodes.length > 0)
+            // {
+            //     Xoa();
+            // }
+
+
+            // Cach 02:
+            danhSach.innerHTML = "";
+            i = 1;
+        }
+
+    </script>
+</body>
+</html>
